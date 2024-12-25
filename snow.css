@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+}
+
+.container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.snow{
+    position: relative;
+    display: flex;
+}
+
+.snow span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px gainsboro, 
+    0 0 50px white,
+    0 0 100px white;
+    animation: animate 23s linear infinite;
+    animation-duration: calc(125s / var(--i)) ;
+    
+}
+
+@keyframes animate{
+    0%
+    {
+        transform: translateY(-10vh) scale(0);
+    }
+    100%{
+        transform: translateY(100vh) scale(1);
+
+    }
+}
